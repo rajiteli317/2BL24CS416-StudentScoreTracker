@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Score Tracker</title>
+</head>
+<body>
+
+    <h2>Student Score Tracker</h2>
+
+    <!-- Form to add score -->
+    <form action="ScoreServlet" method="post">
+        <label>Subject:</label>
+        <input type="text" name="subject" required><br><br>
+
+        <label>Score:</label>
+        <input type="number" name="score" min="0" max="100" required><br><br>
+
+        <input type="submit" value="Add Score">
+    </form>
+
+    <br>
+
+    <!-- Form to reset -->
+    <form action="ScoreServlet" method="post">
+        <input type="hidden" name="action" value="reset">
+        <input type="submit" value="Reset Scores">
+    </form>
+
+</body>
